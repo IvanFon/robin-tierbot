@@ -1,5 +1,5 @@
 # Robin Tierbot
-A userscript that outputs your rooms current tier to the chat when a certain command is said.
+A userscript that outputs your rooms current tier to the chat when a certain command is said. This bot attempts to be as spam-free as possible. It only sends messages every time a user types !tier and every 5 minutes telling users that the !tier command exists.
 
 # Installation
 
