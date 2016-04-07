@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Robin Tierbot
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  A bot that displays the current room tier.
 // @author       porso7
 // @include      https://www.reddit.com/robin*
@@ -26,7 +26,7 @@ function getTier(user) {
             if (data[key]["room"] == roomName) {
                 
                 // Send a message with the current tier
-                var message = user.trim() + " This room is tier " + data[key]["tier"].trim();
+                var message = user.trim() + " This room is tier " + data[key]["tier"].trim() + " .";
                 sendMessage(message.trim());
             }
         }
