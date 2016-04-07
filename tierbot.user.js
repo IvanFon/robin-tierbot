@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Robin Tierbot
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  A bot that displays the current room tier.
 // @author       porso7
 // @include      https://www.reddit.com/robin*
@@ -40,7 +40,7 @@ function getTier(user) {
 function sendMessage(message) {
 
     // Input the message in the message field and submit it
-    $(".text-counter-input").val(message).submit();
+    $(".text-counter-input").val(message.trim()).submit();
 
     // Apparantly it has to be submitted twice
     $("#sendBtn").trigger("onclick");
@@ -81,3 +81,11 @@ observer.observe($("#robinChatMessageList").get(0), {
 
 // Log that the script loaded to the console
 console.log("Robin-tierbot loaded.");
+
+// Tell users that they can use the !tier command 
+// once when the bot joins and every 5 minutes
+sendMessage("Want to find out the current tier of this room? Type !tier. (I am a bot. If I don't respond to you, I probably got rate-limited.)".trim());
+
+setInterval(function() {
+    sendMessage("Want to find out the current tier of this room? Type !tier. (I am a bot. If I don't respond to you, I probably got rate-limited.)".trim());
+}, 300000);
