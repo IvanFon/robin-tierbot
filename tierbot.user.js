@@ -25,7 +25,8 @@ function getTier(user) {
             if (data[key]["room"] == roomName) {
                 
                 // Send a message with the current tier
-                sendMessage(user + " This room is tier " + data[key]["tier"]);
+                var message = user.trim() + " This room is tier " + data[key]["tier"].trim();
+                sendMessage(message.trim());
             }
         }
     });
