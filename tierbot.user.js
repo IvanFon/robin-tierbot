@@ -5,6 +5,7 @@
 // @description  A bot that displays the current room tier.
 // @author       porso7
 // @include      https://www.reddit.com/robin*
+// @updateURL    https://raw.githubusercontent.com/IvanFon/robin-tierbot/master/tierbot.user.js
 // @require      https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js
 // @grant        GM_xmlhttpRequest
 // ==/UserScript==
